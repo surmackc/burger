@@ -2,30 +2,30 @@
 
 <h2>What's on the menu?</h2>
 
-<ul>
+<P>
   {{#each burgers}}
     {{#unless devoured}}
       {{> burgers/burger-block devoured=false}}
     {{/unless}}
   {{/each}}
-</ul>
+</P>
 
 <h2>Devoured!</h2>
 
-<ul>
+<P>
   {{#each burgers}}
     {{#if devoured}}
       {{> burgers/burger-block devoured=true}}
     {{/if}}
   {{/each}}
-</ul>
+</P>
 
 <h2>Create a Burger</h2>
 <form class="create-form">
 
   <div class="form-group">
     <label for="burger">Burger Name:</label>
-    <input type="text" id="burger(CA)" name="name">
+    <input type="text" id="burger" name="name">
   </div>
 
   <button type="submit">Create Burger</button>

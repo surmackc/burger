@@ -27,7 +27,7 @@ var orm = {
         });
     },
 
-    update: function(table, objColVals, condition, cb) {
+    update: function(table, condition, cb) {
         var queryString = "UPDATE " + table + " SET devoured WHERE ";
 
         queryString += condition;
