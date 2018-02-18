@@ -27,10 +27,14 @@ var orm = {
         });
     },
 
-    update: function(table, condition, cb) {
-        var queryString = "UPDATE " + table + " SET devoured WHERE ";
-
+    update: function(table, objColVals, condition, cb) {
+        var queryString = "UPDATE " + table + " SET ";
+        
+        objColVals = "devoured =true "
+        queryString += objColVals
+        queryString += "WHERE "
         queryString += condition;
+        queryString += ";";
 
         console.log(queryString);
 
